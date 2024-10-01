@@ -82,12 +82,16 @@ export default async function EventPage({
             ) : null}
             {headline?.name ? (
               <dl className="grid grid-cols-2 gap-1 text-sm font-medium sm:gap-2 lg:text-base">
-                <dd className="font-semibold">Artist</dd>
-                <dt>{headline?.name}</dt>
+                <div>
+                  <dd className="font-semibold">Artist</dd>
+                  <dt>{headline?.name}</dt>
+                </div>
               </dl>
             ) : null}
             <dl className="grid grid-cols-2 gap-1 text-sm font-medium sm:gap-2 lg:text-base">
-              <dd className="font-semibold">Date</dd>
+              <div>
+                <dd className="font-semibold">Date</dd>
+              </div>
               <div>
                 {eventDate && <dt>{eventDate}</dt>}
                 {eventTime && <dt>{eventTime}</dt>}
@@ -95,7 +99,9 @@ export default async function EventPage({
             </dl>
             {doorsOpenTime ? (
               <dl className="grid grid-cols-2 gap-1 text-sm font-medium sm:gap-2 lg:text-base">
-                <dd className="font-semibold">Doors Open</dd>
+                <div>
+                  <dd className="font-semibold">Doors Open</dd>
+                </div>
                 <div className="grid gap-1">
                   <dt>Doors Open</dt>
                   <dt>{doorsOpenTime}</dt>
